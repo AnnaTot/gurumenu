@@ -1,0 +1,382 @@
+  html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-x: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+    }
+
+    nav li {
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: black;
+      padding: 8px 4px;
+      font-weight: 500;
+      white-space: nowrap;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 3px;
+      background-color: rgb(52, 122, 144);
+      transition: width 0.3s ease;
+    }
+
+    nav a.active {
+      color: rgb(52, 122, 144);
+      font-weight: bold;
+    }
+
+    nav a.active::after {
+      width: 100%;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+      padding: 100px 20px 60px;
+      height: auto;
+      min-height: 80vh;
+      border-bottom: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        padding: 10px;
+        gap: 10px;
+      }
+
+      nav li {
+        margin-right: 10px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf5;
+  margin: 20px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px 15px;
+  vertical-align: top;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.ingredients {
+  font-size: 14px;
+  color: #444;
+}
+
+.price {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.separator {
+  border-top: 1px solid #ccc;
+}
+
+
+@media (max-width: 600px) {
+  table, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+
+  .price {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .separator {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+.responsive-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.responsive-image img {
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  display: block;
+}
+
+
+#pizzaPage {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden; 
+}
+
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.2; 
+  pointer-events: none; 
+}
+
+
+.menu-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .bg-image {
+    display: none;
+  }
+
+  #pizzaPage {
+    padding-left: 20px;
+  }
+}
+
+
+#welcomePage{
+  text-align: justify;
+}
+
+
+
+
+.dish {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.left {
+  flex-basis: 72%;
+  padding-right: 20px;
+}
+
+.right {
+  flex-basis: 28%;
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #444;
+  position: relative;
+  z-index: 1;
+  font-size: 21px;
+}
+
+.dish::before {
+  content: "";
+  position: absolute;
+  right: calc(28% + 10px);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #aaa;
+  z-index: 0;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ingredients {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+@media (max-width: 480px) {
+  .left {
+    flex-basis: 65%;
+  }
+
+  .right {
+    flex-basis: 35%;
+    font-size: 16px;
+  }
+
+  .dish::before {
+    right: calc(35% - 5px);
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .ingredients {
+    font-size: 13px;
+  }
+}
+
+
+h1{
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+
+
+
+@font-face {
+  font-family: 'SajatBetutipus';
+  src: url('../fonts/BebasNeue-Regular.otf') format('opentype');
+}
+
+* {
+  font-family: 'SajatBetutipus';
+  font-size: 24px;
+}
+
+
+
+h2{
+  margin-top: 50px;
+  font-size: 22px;
+  
+
+
+}
+
+h1{
+  font-size: 26px;
+  
+
+}
+
+
+section {
+  position: relative;
+  z-index: 2;
+  left: 10px;
+ 
+}
+
+.picture {
+  position: absolute;
+  z-index: -1; 
+  left: -70px; 
+  
+
+}
+
+section{
+   
+    color:  #042331;
+    background-color: #fffaf5;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+
+section {
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+  
+}
+
+.picture {
+  position: absolute;
+  left: -20px; 
+  z-index: -1; 
+
+}
+
+
+.arrow{
+  
+  width: 20px;
+  height: 20px;
+}
